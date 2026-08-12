@@ -12,7 +12,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Installing dependencies...'
-                sh 'npm install'
+                sh 'npm ci --no-audit --no-fund'
 
                 echo 'Building React application...'
                 sh 'npm run build'
